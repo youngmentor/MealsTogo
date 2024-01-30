@@ -6,15 +6,15 @@ import styled from "styled-components/native";
 
 const SafeArea = styled(SafeAreaView)`
  flex: 1;
- margin-top: ${StatusBar.currentHeight}px;
+ ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `
 const SearchWrap = styled.View`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]}
 `;
 
 const RestaurantsInfoWrap = styled.View`
   flex: 1;
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]}
 `;
 export const RestaurantScreens = () => (
   <SafeArea style={{ flex: 1 }}>
